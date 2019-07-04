@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'page/show'
   get 'home/show'
-  resources :posts
+  
+  resources :page, only: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+root 'home#show'
+
 end
