@@ -63,9 +63,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #other useful gems for the app
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'active_admin_editor'
+gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 gem 'font-awesome-rails'
 gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
 gem 'bulma-rails', '~> 0.7.1'
 gem 'simple_form'
 gem 'devise', '~> 4.4'
