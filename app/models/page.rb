@@ -1,3 +1,3 @@
 class Page < ApplicationRecord
-	belong_to :section
+	belongs_to :section
 end
