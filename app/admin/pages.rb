@@ -29,7 +29,7 @@ ActiveAdmin.register Page do
     f.inputs "Details" do
       f.input :title, :label => "Title"
       f.input :section, :label => "Section Name"
-      f.input :body, :label => "Description"
+      f.input :body, as: :html_editor, :label => "Description"
       f.input :order, :label => "Order"
       f.input :is_published, :label => "Published"
       f.input :menu_display, :label => "Display in menu"
