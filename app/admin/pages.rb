@@ -1,5 +1,5 @@
 ActiveAdmin.register Page do
-
+  
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -15,7 +15,10 @@ ActiveAdmin.register Page do
 
   permit_params :title, :body, :order, :is_published, :section_id, :menu_display
 
-  index do
+  reorderable
+
+
+  index as: :reorderable_table do
     column :id
     column :title, :sortable => :title
     column :section, :sortable => :section
