@@ -78,3 +78,5 @@ gem 'sidekiq'
 gem 'kramdown'
 gem 'activeadmin_reorderable'
 gem 'paper_trail'
+
+gem 'active_admin_flat_skin'
