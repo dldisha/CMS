@@ -51,6 +51,8 @@ GEM
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
     active_admin_flat_skin (0.1.2)
+    activeadmin_medium_editor (0.2.4)
+      activeadmin (>= 1.0)
     activeadmin_reorderable (0.1.2)
     activejob (5.2.3)
       activesupport (= 5.2.3)
@@ -351,6 +353,7 @@ DEPENDENCIES
   active_admin_editor!
   active_admin_flat_skin
   activeadmin!
+  activeadmin_medium_editor
   activeadmin_reorderable
   autoprefixer-rails
   better_errors (~> 2.4)
