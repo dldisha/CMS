@@ -3,4 +3,4 @@
 //= require active_admin_flat_skin
 //= require activeadmin/medium_editor/medium_editor
 //= require activeadmin/medium_editor_input
-
+//= require active_admin/sortable

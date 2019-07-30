@@ -81,3 +81,6 @@ gem 'paper_trail'
 
 gem 'active_admin_flat_skin'
 gem 'activeadmin_medium_editor'
+gem "active_admin-sortable_tree", "~> 2.0.0"
+gem 'ancestry'
+gem 'protected_attributes_continued'

@@ -57,5 +57,17 @@ end
     end
   end
 
+    sortable tree: true,
+           sorting_attribute: :order,
+           parent_method: :parent,
+           children_method: :children,
+           roots_method: :roots
+           
+
+  index :as => :sortable do
+    label :title # item content
+        actions
+  end
+
   
 end
