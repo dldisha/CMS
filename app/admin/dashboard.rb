@@ -15,7 +15,7 @@ ActiveAdmin.register_page "Dashboard" do
 
         section "Recently updated content" do
   table_for PaperTrail::Version.order('id desc').limit(20) do
-      column "Item" do |v| link_to v.item, v.item.admin_permalink end
+      # column "Item" do |v| link_to v.item, v.item.admin_permalink end
     column "Type" do |v| v.item_type.underscore.humanize end
     column "Modified at" do |v| v.created_at.to_s :long end
     # column "Admin" do |v| link_to AdminUser.find(v.whodunnit).email, admin_admin_user_path(AdminUser.find(v.whodunnit)) end
