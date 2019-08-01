@@ -85,5 +85,4 @@ gem 'activeadmin_medium_editor'
 gem "active_admin-sortable_tree", "~> 2.0.0"
 gem 'ancestry'
 gem 'protected_attributes_continued'
-gem 'will_paginate', '~> 3.1.0'
-gem 'kaminari'
+

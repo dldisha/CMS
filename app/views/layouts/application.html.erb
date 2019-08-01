@@ -9,27 +9,54 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag 'logo.png' %>
+
   </head>
 
   <body class="<%= yield (:body_class) %>">
+
     <% if flash[:notice] %>
       <div class="notification is-success global-notification">
         <p class="notice"><%= notice %></p>
       </div>
     <% end %>
+
     <% if flash[:alert] %>
     <div class="notification is-danger global-notification">
       <p class="alert"><%= alert %></p>
     </div>
     <% end %>
+
      <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <div class="logo">
-              <img width="200"  src="https://image.flaticon.com/icons/png/512/1419/1419429.png">
-      </div>
+          <img width="200"  src="https://image.flaticon.com/icons/png/512/1419/1419429.png">
+        </div>
         <%= link_to root_path, class:"navbar-item" do %>
           <h1 class="title is-1" style="color:white;">ZENIFY</h1>
         <% end  %>
+       
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Blogs
+        </a>
+        
+      <div class="navbar-dropdown">
+         <% @pageNav.all.each do |page| %>
+          <a class="navbar-item">
+            <li><%= link_to page.title, page_path(page.id) %></li>
+          </a>
+        <% end %>
+      
+        <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+      
 
       <div class="navbar-burger burger" data-target="navbar">
         <span></span>
