@@ -1,24 +1,9 @@
-<style>
-
-.label{
-  color: white;
-}
-
-.title{
-  color: white;
-}
-
-.field{
-  color: white;
-}
-</style>
-
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-4">
         <h2 class="title is-2">Log in</h2>
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: user_session_path()) do |f| %>
 
           <div class="field">
             <div class="control">
@@ -38,7 +23,7 @@
             </div>
           </div>
 
-          <%= f.button :submit, "Log in", class:"button is-link is-medium" %>
+          <%= f.button :submit, "Log in", class:"button is-dark is-medium" %>
         <% end %>
         <br/>
         <%= render "devise/shared/links" %>

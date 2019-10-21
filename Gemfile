@@ -86,3 +86,6 @@ gem "active_admin-sortable_tree", "~> 2.0.0"
 gem 'ancestry'
 gem 'protected_attributes_continued'
 
+# storage
+gem "aws-sdk-s3", require: false
+

@@ -1,25 +1,10 @@
-<style>
-
-.label{
-  color: white;
-}
-
-.title{
-  color: white;
-}
-
-.field{
-  color: white;
-}
-</style>
-
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-4">
 
       <h2 class="title is-2">Edit <%= resource_name.to_s.humanize %></h2>
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
           <div class="field">
@@ -58,7 +43,7 @@
             </div>
         </div>
 
-        <%= f.button :submit, "Update", class:"button is-link" %>
+        <%= f.button :submit, "Update", class:"button is-dark" %>
 
       <% end %>
 

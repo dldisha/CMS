@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  respond_to :html, :json
 	before_action :set_paper_trail_whodunnit
 	before_action :getPageNav
 	
