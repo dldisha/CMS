@@ -13,7 +13,7 @@ ActiveAdmin.register Page do
   #   permitted
   # end
 
-  permit_params :title, :body, :order, :is_published, :section_id, :menu_display, :featured
+  permit_params :title, :body, :order, :is_published, :menu_display, :featured
 
   reorderable
 
@@ -25,6 +25,8 @@ ActiveAdmin.register Page do
       show! #it seems to need this
   end
 end
+
+
   sidebar :versionate, :partial => "layouts/version", :only => :show
 
   member_action :history do
@@ -47,9 +49,9 @@ end
   form do |f|
     f.inputs "Details" do
       f.input :title, :label => "Title"
-      # f.input :section, :label => "Section Name"
-      # f.input :body, as: :html_editor, :label => "Description"
-      f.input :body, as: :medium_editor, input_html: { data: { options: '{"spellcheck":true,"toolbar":{"buttons":["bold","italic","underline","anchor","orderedlist","unorderedlist","strikethrough","subscript","superscript","pre","h1","h2","h3","html"]}}' } }
+      f.input :section, :label => "Section Name"
+      f.input :body, as: :html_editor, :label => "Description"
+      #f.input :body, as: :medium_editor, input_html: { data: { options: '{"spellcheck":true,"toolbar":{"buttons":["bold","italic","underline","anchor","orderedlist","unorderedlist","strikethrough","subscript","superscript","pre","h1","h2","h3","html"]}}' } }
       f.input :order, :label => "Order"
       f.input :is_published, :label => "Published"
       f.input :featured, :label => "Featured"

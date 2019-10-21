@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ZENIFY</title>
+    <title>PLATYPUS</title>
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
 
   </head>
 
-  <body class="<%= yield (:body_class) %>">
+  <body class="<%= yield (:body_class) %> color" >
 
     <% if flash[:notice] %>
       <div class="notification is-success global-notification">
@@ -26,19 +26,36 @@
     </div>
     <% end %>
 
-     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <div class="logo">
-          <img width="200"  src="https://image.flaticon.com/icons/png/512/1419/1419429.png">
+          <img width="200"  src="http://www.textures4photoshop.com/tex/thumbs/glowing-triangle-1-thumb18.jpg">
         </div>
         <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-1" style="color:white;">ZENIFY</h1>
+          <h1 class="title is-1" style="color:white;">PLATYPUS</h1>
         <% end  %>
-       
 
-      <div class="navbar-item has-dropdown is-hoverable">
+        <div id="navbar" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+
+      
+   
+
+      <%= link_to "Pricing", home_pricing_path, class:"navbar-item button is-black" %>
+          
+      
+
+    </div>
+  </div>
+</div>
+</div>
+       
+       
+      <div class="navbar-item has-dropdown is-hoverable is-link">
         <a class="navbar-link">
-          Blogs
+          Articles
         </a>
         
       <div class="navbar-dropdown">
@@ -54,6 +71,8 @@
           </a>
         </div>
       </div>
+
+
     </div>
 
       
@@ -81,8 +100,8 @@
               </div>
             <% else %>
 
-            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-dark" %>
-            <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-dark"%>
+            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-link" %>
+            <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-link"%>
 
             <% end %>
 
@@ -99,6 +118,6 @@
     <%= yield %>
 
   </div>
-
+<%= render 'layouts/footer' %>
   </body>
 </html>

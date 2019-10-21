@@ -19,16 +19,7 @@ ActiveAdmin.register Task do
     end 
   end
 
-  index do
-    column :id
-     column :title do |section|
-    link_to section.title, admin_section_path(section)
-  end
-    column :section, :sortable => :section
-    column :created_at, :sortable => :created_at
-    column :order
-  section.actions
- end
+
  
 # Filter only by title
 filter :title
