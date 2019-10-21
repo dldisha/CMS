@@ -89,3 +89,5 @@ gem 'protected_attributes_continued'
 # storage
 gem "aws-sdk-s3", require: false
 
+gem "figaro"
+
