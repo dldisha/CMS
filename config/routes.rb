@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'home/show'
   get 'home/about'
   get 'home/pricing'
+  get 'home/cms'
   
   resources :page, only: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
