@@ -1,5 +1,5 @@
 ActiveAdmin.register Page do
-  
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -13,7 +13,7 @@ ActiveAdmin.register Page do
   #   permitted
   # end
 
-  permit_params :title, :body, :order, :is_published, :menu_display, :featured
+  permit_params :title, :body, :order, :is_published, :section_id, :menu_display
 
   reorderable
 
@@ -35,8 +35,8 @@ end
     render "layouts/history"
   end
 
-
-  index as: :reorderable_table do
+   
+   index as: :reorderable_table do
     column :id
     column :title, :sortable => :title
     column :section, :sortable => :section
@@ -49,7 +49,7 @@ end
   form do |f|
     f.inputs "Details" do
       f.input :title, :label => "Title"
-      
+      f.input :section, :label => "Section Name"
       f.input :body, as: :html_editor, :label => "Description"
       #f.input :body, as: :medium_editor, input_html: { data: { options: '{"spellcheck":true,"toolbar":{"buttons":["bold","italic","underline","anchor","orderedlist","unorderedlist","strikethrough","subscript","superscript","pre","h1","h2","h3","html"]}}' } }
       f.input :order, :label => "Order"
@@ -60,7 +60,7 @@ end
     end
   end
 
-    sortable tree: true,
+   sortable tree: true,
            sorting_attribute: :order,
            parent_method: :parent,
            children_method: :children,

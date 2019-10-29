@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 2019_08_01_112811) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
-    t.boolean "featured"
+    t.boolean "featured" 
     t.string "tag"
     t.string "slug"
     t.string "hashtag"
